@@ -34,8 +34,9 @@ Parameters:
     ServerInstanceType:
         Description: The instance type for the EC2 instance running container with TeamCity Server
         Type: String
-        Default: c5.large
+        Default: t2.micro
         AllowedValues:
+          - t2.micro
           - t2.medium
           - t2.large
           - t2.xlarge
@@ -75,6 +76,7 @@ Parameters:
             Type: String
             Default: db.t2.medium
             AllowedValues:
+              - db.t3.small
               - db.t2.medium
               - db.m4.large
               - db.m4.xlarge
@@ -101,8 +103,9 @@ Parameters:
     AgentInstanceType:
         Description: The instance type for the EC2 instance running container with TeamCity Build Agent
         Type: String
-        Default: t2.medium
+        Default: t2.micro
         AllowedValues:
+          - t2.micro
           - t2.small
           - t2.medium
           - t2.large
