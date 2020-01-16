@@ -28,7 +28,7 @@ Parameters:
 
     ServerContainerMemory:
         Type: Number
-        Default: 3700
+        Default: 1024
         Description: How much memory in megabytes to give the container running TeamCity server
 
     ServerInstanceType:
@@ -74,7 +74,7 @@ Parameters:
     DBInstanceType:
             Description: The instance type for the RDS instance for TeamCity Database
             Type: String
-            Default: db.t2.medium
+            Default: db.t3.small
             AllowedValues:
               - db.t3.small
               - db.t2.medium
@@ -153,7 +153,7 @@ Parameters:
 
     AgentContainerMemory:
       Type: Number
-      Default: 2048
+      Default: 1024
       Description: How much memory in megabytes to give the container running TeamCity build agent
 
     CertificateDomainName:
